@@ -37,6 +37,9 @@ public:
   void addCard(Card<T> *c){
     deck.push_back(*c);
   }
+  void removeCard(){
+	deck.pop_back();
+  }
 
   Card<T>* drawCard(){
     if(!deck.empty()){
@@ -51,7 +54,6 @@ public:
     for(unsigned int i = 0; i < deck.size(); i++){
       cout << deck[i].toString() << " ";
     }
-    cout << endl;
   }
 
   T getValue(Card<T> card) const{
@@ -95,7 +97,6 @@ public:
     return deck;
   }
 
-private:
   vector<Card<T>> deck;
 };
 #endif

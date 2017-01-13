@@ -22,6 +22,7 @@ public:
 
   string name;
   Deck<T> hand;
+  Deck<T> split;
 };
 
 #endif
